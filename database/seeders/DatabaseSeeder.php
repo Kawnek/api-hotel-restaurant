@@ -29,9 +29,9 @@ class DatabaseSeeder extends Seeder
         DiningTable::factory()->count(25)->create();
         Room::factory()->count(10)->create();
         MenuItem::factory()->count(50)->create();
-        Order::factory()->count(20)->create();
+        // Order::factory()->count(1)->create();
 
-        DB::table('menu_item_order')->insert($pivotItems);
+        // DB::table('menu_item_order')->insert($pivotItems);
     }
 
     public function generate_item_order_pivot()
