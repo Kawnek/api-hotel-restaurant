@@ -6,6 +6,7 @@ use App\Filament\Resources\RoomResource\Pages;
 use App\Filament\Resources\RoomResource\RelationManagers;
 use App\Models\Room;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -32,10 +33,8 @@ class RoomResource extends Resource
                 Forms\Components\TextInput::make('price')
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\TextInput::make('hotel_id')
-                    ->tel()
-                    ->numeric()
-                    ->default(null),
+                Select::make('hotel_id')
+                    ->relationship('hotel', 'name'),
             ]);
     }
 

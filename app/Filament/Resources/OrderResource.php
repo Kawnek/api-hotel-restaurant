@@ -6,6 +6,7 @@ use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
 use App\Models\Order;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -30,18 +31,15 @@ class OrderResource extends Resource
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\TextInput::make('user_id')
-                    ->numeric()
-                    ->default(null),
-                Forms\Components\TextInput::make('dining_table_id')
-                    ->numeric()
-                    ->default(null),
-                Forms\Components\TextInput::make('room_id')
-                    ->numeric()
-                    ->default(null),
+                Select::make('user_id')
+                    ->relationship('user', 'name'),
+                Select::make('room_id')
+                    ->relationship('room', 'number'),
+                Select::make('dining_table_id')
+                    ->relationship('dining_table', 'number'),
             ]);
     }
 

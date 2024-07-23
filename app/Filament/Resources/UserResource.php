@@ -27,7 +27,7 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\TextInput::make('house_no')

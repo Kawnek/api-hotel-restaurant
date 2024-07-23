@@ -29,6 +29,8 @@ class MenuItemResource extends Resource
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255)
                     ->default(null),
+                Forms\Components\TextInput::make('price')
+                    ->numeric(),
             ]);
     }
 

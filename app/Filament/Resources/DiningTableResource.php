@@ -6,6 +6,7 @@ use App\Filament\Resources\DiningTableResource\Pages;
 use App\Filament\Resources\DiningTableResource\RelationManagers;
 use App\Models\DiningTable;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -29,10 +30,8 @@ class DiningTableResource extends Resource
                 Forms\Components\TextInput::make('number')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('hotel_id')
-                    ->tel()
-                    ->required()
-                    ->numeric(),
+                Select::make('hotel_id')
+                    ->relationship('hotel', 'name'),
             ]);
     }
 

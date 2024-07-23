@@ -27,11 +27,11 @@ class HotelResource extends Resource
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\TextInput::make('phone_alt')
-                    ->tel()
+
                     ->maxLength(255)
                     ->default(null),
                 Forms\Components\TextInput::make('address')
