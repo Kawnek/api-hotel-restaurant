@@ -22,4 +22,9 @@ class Order extends Model
     {
         return $this->belongsTo(Room::class);
     }
+
+    public function menu_items()
+    {
+        return $this->belongsToMany(MenuItem::class);
+    }
 }
