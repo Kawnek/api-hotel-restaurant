@@ -12,7 +12,7 @@ class DiningTableController extends Controller
      */
     public function index()
     {
-        //
+        return DiningTable::all();
     }
 
     /**

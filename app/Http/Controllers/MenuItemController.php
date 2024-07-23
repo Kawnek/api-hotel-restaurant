@@ -12,7 +12,7 @@ class MenuItemController extends Controller
      */
     public function index()
     {
-        //
+        return MenuItem::all();
     }
 
     /**
