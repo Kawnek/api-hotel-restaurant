@@ -40,6 +40,9 @@ class OrderResource extends Resource
                     ->relationship('room', 'number'),
                 Select::make('dining_table_id')
                     ->relationship('dining_table', 'number'),
+                Select::make('menu_items')
+                    ->multiple()
+                    ->relationship(titleAttribute: 'name')
             ]);
     }
 

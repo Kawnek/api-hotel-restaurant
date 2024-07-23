@@ -6,9 +6,11 @@ use App\Filament\Resources\MenuItemResource\Pages;
 use App\Filament\Resources\MenuItemResource\RelationManagers;
 use App\Models\MenuItem;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -26,11 +28,16 @@ class MenuItemResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->maxLength(255)
                     ->default(null),
+                Forms\Components\TextInput::make('price')
+                    ->numeric(),
+                FileUpload::make('image_path')
+                    ->label('Image')
+
+                //
+                ,
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\TextInput::make('price')
-                    ->numeric(),
             ]);
     }
 
@@ -38,6 +45,7 @@ class MenuItemResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('image_path'),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')

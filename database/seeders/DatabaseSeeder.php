@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
     {
         $menuItems = [];
 
-        for ($i = 0; $i < rand(20 * 3, 20 * 5); $i++) {
+        for ($i = 0; $i < rand(20 * 5, 20 * 5); $i++) {
             $menuItems[] = [
                 "menu_item_id" => random_int(1, 50),
                 "order_id" => random_int(1, 20),

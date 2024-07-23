@@ -15,9 +15,11 @@ class MenuItemFactory extends Factory
     public function definition(): array
     {
         $faker = app(Faker::class);
-
+        $image_path = rand(1, 20) . '.jpg';
+        // $image_path = 'image-' . rand(1, 10) . '.jpg';
         return [
             'name' => $faker->text(15),
+            'image_path' => $image_path,
             'description' => $faker->text(20),
             'price' => $faker->randomFloat(2, 10, 100),
         ];
