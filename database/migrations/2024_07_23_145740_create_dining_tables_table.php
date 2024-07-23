@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('dining_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('data');
             $table->string('number');
             $table->foreignIdFor(Hotel::class);
             $table->timestamps();
