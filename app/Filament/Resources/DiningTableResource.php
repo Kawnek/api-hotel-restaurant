@@ -39,8 +39,6 @@ class DiningTableResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('data')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('number')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('hotel_id')
