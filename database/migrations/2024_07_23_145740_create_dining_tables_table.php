@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('number');
             $table->foreignIdFor(Hotel::class);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

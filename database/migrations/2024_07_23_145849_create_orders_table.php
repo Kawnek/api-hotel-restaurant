@@ -23,6 +23,7 @@ return new class extends Migration
             $table->foreignIdFor(DiningTable::class)->nullable();
             $table->foreignIdFor(Room::class)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

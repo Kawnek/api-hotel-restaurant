@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->foreignIdFor(Hotel::class)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

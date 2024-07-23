@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('locality')->nullable();
             $table->string('district')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
