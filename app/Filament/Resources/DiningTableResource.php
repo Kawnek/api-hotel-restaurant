@@ -18,7 +18,7 @@ class DiningTableResource extends Resource
 {
     protected static ?string $model = DiningTable::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-device-tablet';
 
     public static function form(Form $form): Form
     {
