@@ -20,6 +20,8 @@ class MenuItemFactory extends Factory
         return [
             'name' => $faker->text(15),
             'image_path' => $image_path,
+            'hotel_id' => rand(1, 2),
+            'not_available' => rand(0, 1),
             'description' => $faker->text(20),
             'price' => $faker->randomFloat(2, 10, 100),
         ];
