@@ -41,8 +41,7 @@ class DiningTableResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('number')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('hotel_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('hotel.name')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

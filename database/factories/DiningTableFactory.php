@@ -18,7 +18,7 @@ class DiningTableFactory extends Factory
 
         return [
             'number' => $faker->unique()->randomNumber(2),
-            'hotel_id' => rand(1, 3),
+            'hotel_id' => rand(1, 2),
         ];
     }
 }

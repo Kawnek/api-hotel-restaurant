@@ -24,11 +24,11 @@ class DatabaseSeeder extends Seeder
             // User::factory()->count(20)->create(),
         ]);
         $pivotItems = $this->generate_item_order_pivot();
-        Hotel::factory()->count(3)->create();
+        Hotel::factory()->count(2)->create();
         User::factory(10)->create();
-        DiningTable::factory()->count(25)->create();
-        Room::factory()->count(10)->create();
-        MenuItem::factory()->count(50)->create();
+        DiningTable::factory()->count(11)->create();
+        Room::factory()->count(9)->create();
+        MenuItem::factory()->count(14)->create();
         // Order::factory()->count(1)->create();
 
         // DB::table('menu_item_order')->insert($pivotItems);

@@ -10,4 +10,9 @@ class DiningTable extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function hotel()
+    {
+        return $this->belongsTo(Hotel::class);
+    }
 }

@@ -48,8 +48,7 @@ class RoomResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('hotel_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('hotel.name')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
