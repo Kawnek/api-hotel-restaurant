@@ -58,8 +58,8 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         return $order->load([
-            // 'dining_table', 'room',
-            'menu_items' => fn ($menu_items) => $menu_items->select('id', 'quantity'),
+            'dining_table', 'room',
+            'menu_items' => fn ($menu_items) => $menu_items->select('id', 'menu_item_order.price', 'amount', 'quantity'),
         ]);
     }
 
@@ -98,7 +98,8 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return $this->index();
     }
 
     public function preProcessOrderItems($data)
