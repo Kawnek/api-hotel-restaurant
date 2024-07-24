@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('redirect-login', function () {
     return redirect('login');
-});
+})->name('login');
