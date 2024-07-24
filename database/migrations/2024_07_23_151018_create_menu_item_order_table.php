@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('menu_item_order', function (Blueprint $table) {
             $table->foreignIdFor(MenuItem::class);
             $table->foreignIdFor(Order::class);
+            $table->decimal('quantity')->nullable();
+            $table->decimal('price')->nullable();
+            $table->decimal('amount')->nullable();
         });
     }
 
