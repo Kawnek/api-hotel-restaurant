@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image_path')->nullable();
             $table->string('description')->nullable();
             $table->decimal('price')->nullable();
+            $table->boolean('not_available')->default(false);
             $table->foreignIdFor(Hotel::class)->nullable();
             $table->timestamps();
             $table->softDeletes();
