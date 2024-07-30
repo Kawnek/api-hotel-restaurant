@@ -15,4 +15,8 @@ class MenuItem extends Model
     {
         return $this->belongsTo(Hotel::class);
     }
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }
