@@ -28,11 +28,11 @@ class StatsOverview extends BaseWidget
             ->get();
 
 
-
+        $totalAmount = $orders->sum('total_amount');
 
         return [
             Stat::make('Total orders today', $orders->count()),
-            Stat::make('Total amount', $orders->sum('total_amount')),
+            Stat::make('Total amount', "₹ $totalAmount"),
         ];
     }
 }
